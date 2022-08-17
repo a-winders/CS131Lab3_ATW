@@ -47,11 +47,12 @@ public class ArrayList<T> {
 	
   
   /*
-   * Adds an item of any type to the arraylist, ar.List
+   * Adds an item of any type to the arraylist, ar.List.
+   * My code returns the fourth String input on the ListApp page - not sure why?
    */
   	public boolean addItem (T item) {
-  		currentItem = 0;
   		if (currentItem <= arList.length) {
+  				arList[currentItem] = item; 
   				currentItem = currentItem ++;
   				return true;
   		}
@@ -61,13 +62,17 @@ public class ArrayList<T> {
   	}	// end addItem
 
   	/*
-  	 * Prints a string of the toString methods from PointThreeD and Square classes,
-  	 * and iterates through the internal array.
+  	 * Prints a string of the 
+  	 * the internal array.
+  	 * 
+  	 * Formatted with line returns to look more neat.
   	 */
 	@Override
 	public String toString() {
-		return "ArrayList [DEFAULT_SIZE=" + DEFAULT_SIZE + ", currentItem=" + currentItem + ", arList="
-				+ Arrays.toString(arList) + ", toString()=" + super.toString() + "]";
+		StringBuilder str = new StringBuilder();
+		str.append(arList);
+		return "\n ArrayList \n [DEFAULT_SIZE = " + DEFAULT_SIZE + "\n currentItem = " + currentItem + "\n arList = "
+				+ Arrays.toString(arList) + "\n toString() = " + super.toString() + "]";
 	}	// end toString
 
 	
